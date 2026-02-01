@@ -119,9 +119,9 @@ const Navbar = () => {
                             <a href="https://saas-clinico-bot-production.up.railway.app/login" className="text-surface-600 font-semibold text-[15px] hover:text-brand transition-colors px-4 py-2">
                                 Iniciar Sesión
                             </a>
-                            <button className="btn-primary !px-6 !py-2.5 !text-[15px] !rounded-xl">
+                            <a href="https://saas-clinico-bot-production.up.railway.app/register" className="btn-primary !px-6 !py-2.5 !text-[15px] !rounded-xl">
                                 Comenzar Gratis
-                            </button>
+                            </a>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -170,9 +170,9 @@ const Navbar = () => {
                         <a href="https://saas-clinico-bot-production.up.railway.app/login" className="block w-full py-4 text-center font-bold text-surface-900 bg-surface-100 rounded-2xl hover:bg-surface-200 transition-all">
                             Iniciar Sesión
                         </a>
-                        <button className="w-full py-4 text-center font-bold text-white bg-brand rounded-2xl shadow-xl shadow-brand/20 active:scale-95 transition-all">
+                        <a href="https://saas-clinico-bot-production.up.railway.app/register" className="block w-full py-4 text-center font-bold text-white bg-brand rounded-2xl shadow-xl shadow-brand/20 active:scale-95 transition-all">
                             Comenzar Gratis
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
