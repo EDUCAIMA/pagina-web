@@ -34,7 +34,7 @@ const Navbar = () => {
         {
             name: "Soluciones",
             dropdown: [
-                { name: "Para Odontólogos", path: "#" },
+                { name: "Para Odontólogos", path: "/soluciones/para-odontologos" },
                 { name: "Para Estéticas", path: "#" },
                 { name: "Para Clínicas", path: "#" },
                 { name: "Casos de Éxito", path: "#" }

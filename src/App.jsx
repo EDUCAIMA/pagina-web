@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import PricingPage from './pages/PricingPage';
 import AiAgentsPage from './pages/AiAgentsPage';
+import ForDentistsPage from './pages/ForDentistsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/precios" element={<PricingPage />} />
           <Route path="/productos/agente-ia" element={<AiAgentsPage />} />
+          <Route path="/soluciones/para-odontologos" element={<ForDentistsPage />} />
         </Routes>
       </Layout>
     </Router>
