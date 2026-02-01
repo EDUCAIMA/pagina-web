@@ -1,4 +1,5 @@
 import React from 'react';
+import { Facebook, Youtube, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -42,6 +43,37 @@ const Footer = () => {
                     <p className="text-sm flex items-center gap-2">
                         Hecho con <span className="text-red-500 animate-pulse">❤️</span> en Colombia
                     </p>
+                </div>
+            </div>
+
+            {/* Social Media Section */}
+            <div className="border-t border-white/5 mt-12 pt-8">
+                <div className="flex justify-center gap-6">
+                    <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
+                        <Facebook className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
+                        <Youtube className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
+                        <Instagram className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-5 h-5"
+                        >
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
+                        <Linkedin className="w-5 h-5" />
+                    </a>
                 </div>
             </div>
         </footer>
