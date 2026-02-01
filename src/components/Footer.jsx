@@ -3,9 +3,9 @@ import { Facebook, Youtube, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-surface-900 text-surface-400 py-24 border-t border-white/5">
+        <footer className="bg-surface-900 text-surface-400 py-12 border-t border-white/5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2 space-y-6">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center shadow-lg shadow-brand/20">
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="border-t border-white/5 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-sm">© {new Date().getFullYear()} MedFlowAI. Todos los derechos reservados.</p>
                     <p className="text-sm flex items-center gap-2">
                         Hecho con <span className="text-red-500 animate-pulse">❤️</span> en Colombia
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media Section */}
-            <div className="border-t border-white/5 mt-12 pt-8">
+            <div className="border-t border-white/5 mt-6 pt-6">
                 <div className="flex justify-center gap-6">
                     <a href="https://www.youtube.com/channel/UCu0GMWxnBjuRW-fd3xlddjg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-surface-800 text-surface-400 hover:text-white hover:bg-brand transition-all duration-300 group">
                         <Facebook className="w-5 h-5" />
