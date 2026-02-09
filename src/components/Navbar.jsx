@@ -60,7 +60,7 @@ const Navbar = () => {
 
                         {/* Logo */}
                         <Link to="/" className="flex-shrink-0 flex items-center cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-                            <img src="/vexvel_logo.png?v=4" alt="VexVel Logo" className="w-10 h-10 object-contain mr-3 group-hover:scale-110 transition-transform" />
+                            <img src="/vexvel_logo.png?v=4" alt="VexVel Logo" className="w-14 h-14 object-contain mr-3 group-hover:scale-110 transition-transform" />
                             <span className="text-2xl font-bold tracking-tight text-surface-900">
                                 VexVel
                             </span>
@@ -114,7 +114,7 @@ const Navbar = () => {
                                 <Globe className="w-4 h-4" />
                                 <span>ES</span>
                             </button>
-                            <a href="https://saas-clinico-bot-production.up.railway.app/login" className="text-surface-600 font-semibold text-[15px] hover:text-brand transition-colors px-4 py-2">
+                            <a href="https://app.vexvel.com" className="text-surface-600 font-semibold text-[15px] hover:text-brand transition-colors px-4 py-2">
                                 Iniciar Sesión
                             </a>
                             <a href="https://saas-clinico-bot-production.up.railway.app/register" className="btn-primary !px-6 !py-2.5 !text-[15px] !rounded-xl">
@@ -165,7 +165,7 @@ const Navbar = () => {
                                 <span className="font-bold text-surface-900">ES</span>
                             </div>
                         </div>
-                        <a href="https://saas-clinico-bot-production.up.railway.app/login" className="block w-full py-4 text-center font-bold text-surface-900 bg-surface-100 rounded-2xl hover:bg-surface-200 transition-all">
+                        <a href="https://app.vexvel.com" className="block w-full py-4 text-center font-bold text-surface-900 bg-surface-100 rounded-2xl hover:bg-surface-200 transition-all">
                             Iniciar Sesión
                         </a>
                         <a href="https://saas-clinico-bot-production.up.railway.app/register" className="block w-full py-4 text-center font-bold text-white bg-brand rounded-2xl shadow-xl shadow-brand/20 active:scale-95 transition-all">
