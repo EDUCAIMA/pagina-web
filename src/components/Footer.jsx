@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2 space-y-6">
                         <div className="flex items-center gap-3">
-                            <img src="/vexvel_logo.png" alt="VexVel Logo" className="w-8 h-8 object-contain" />
+                            <img src="/vexvel_logo.png?v=2" alt="VexVel Logo" className="w-8 h-8 object-contain" />
                             <span className="text-2xl font-bold text-white">
                                 VexVel
                             </span>
