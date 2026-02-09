@@ -8,11 +8,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2 space-y-6">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center shadow-lg shadow-brand/20">
-                                <span className="text-white font-black text-sm">M</span>
-                            </div>
+                            <img src="/vexvel_logo.png" alt="VexVel Logo" className="w-8 h-8 object-contain" />
                             <span className="text-2xl font-bold text-white">
-                                MedFlow<span className="text-gradient">AI</span>
+                                VexVel
                             </span>
                         </div>
                         <p className="max-w-xs text-lg font-light leading-relaxed">
@@ -39,7 +37,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-white/5 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-sm">© {new Date().getFullYear()} MedFlowAI. Todos los derechos reservados.</p>
+                    <p className="text-sm">© {new Date().getFullYear()} VexVel. Todos los derechos reservados.</p>
                     <p className="text-sm flex items-center gap-2">
                         Hecho con <span className="text-red-500 animate-pulse">❤️</span> en Colombia
                     </p>

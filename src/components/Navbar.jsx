@@ -60,11 +60,9 @@ const Navbar = () => {
 
                         {/* Logo */}
                         <Link to="/" className="flex-shrink-0 flex items-center cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-                            <div className="w-10 h-10 bg-brand rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-brand/20 group-hover:rotate-6 transition-transform">
-                                <span className="text-white font-black text-xl">M</span>
-                            </div>
+                            <img src="/vexvel_logo.png" alt="VexVel Logo" className="w-10 h-10 object-contain mr-3 group-hover:scale-110 transition-transform" />
                             <span className="text-2xl font-bold tracking-tight text-surface-900">
-                                MedFlow<span className="text-gradient">AI</span>
+                                VexVel
                             </span>
                         </Link>
 

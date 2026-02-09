@@ -142,7 +142,7 @@ const ForDentistsPage = () => {
                                 ¿Listo para modernizar tu clínica?
                             </h2>
                             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                                Únete a los odontólogos que ya están automatizando su atención y haciendo crecer su negocio con MedFlowAI.
+                                Únete a los odontólogos que ya están automatizando su atención y haciendo crecer su negocio con VexVel.
                             </p>
                             <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">
                                 Comenzar Ahora
