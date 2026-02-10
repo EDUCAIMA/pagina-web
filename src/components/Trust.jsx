@@ -1,6 +1,6 @@
 const Trust = () => {
     return (
-        <section className="py-16 bg-surface-50">
+        <section className="pt-16 pb-8 bg-surface-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-xs font-black text-surface-400 uppercase tracking-[0.3em] mb-12">
                     Potenciado por tecnología Líder en la Industria

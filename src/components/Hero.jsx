@@ -24,11 +24,11 @@ const Hero = () => {
 
                         <div className="space-y-6">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-surface-900 leading-[1.1] tracking-tight">
-                                Recupera el tiempo de tu sillón: <br />
-                                <span className="text-gradient">IA que vende y agenda por ti</span>
+                                Atiende y agenda clientes de forma automatica <br />
+                                <span className="text-gradient">con inteligencia artificial</span>
                             </h1>
                             <p className="text-xl text-surface-500 leading-relaxed max-w-xl font-light">
-                                Elimina los huecos en tu agenda y la fatiga administrativa. Nuestro agente inteligente gestiona pacientes, confirma citas y recupera ventas mientras tú te enfocas en lo que importa.
+                                Deja de perder espacios en tu agenda por no contactar a tus clientes a tiempo, Nuestro agente inteligente gestiona pacientes, confirma citas y recupera ventas mientras tú te enfocas en lo que importa
                             </p>
                         </div>
 
@@ -72,7 +72,7 @@ const Hero = () => {
 
                         {/* Main Image Container */}
                         <div className="relative w-full max-w-[540px] animate-float">
-                            <div className="relative rounded-[32px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border-[8px] border-white/80 glass p-2">
+                            <div className="relative rounded-[32px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border-[8px] border-brand/30 glass p-2">
                                 <img
                                     src="/hero-ia.png"
                                     alt="IA Medical Interface"

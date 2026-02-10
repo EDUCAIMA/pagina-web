@@ -7,7 +7,7 @@ const Problem = () => {
             icon: <UserX className="w-10 h-10 text-red-500" />,
             title: "Inasistencia de Pacientes",
             description: "El 20% de tus pacientes olvida su cita. Eso significa sillones vacíos y tiempos muertos que no se recuperan.",
-            className: "md:col-span-2"
+            className: "md:col-span-1"
         },
         {
             icon: <TrendingDown className="w-10 h-10 text-orange-500" />,
@@ -19,19 +19,19 @@ const Problem = () => {
             icon: <BatteryWarning className="w-10 h-10 text-brand-accent" />,
             title: "Fatiga Administrativa",
             description: "Tu recepcionista pasa horas respondiendo los mismos mensajes en WhatsApp en lugar de atender a los pacientes en sala.",
-            className: "md:col-span-3"
+            className: "md:col-span-1"
         }
     ];
 
     return (
-        <section id="problem" className="py-32 bg-surface-50">
+        <section id="problem" className="pt-8 pb-32 bg-surface-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-20 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-600 font-bold text-xs uppercase tracking-widest mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand font-bold text-xs uppercase tracking-widest mb-6">
                         El Desafío Actual
                     </div>
                     <h2 className="text-4xl md:text-5xl font-extrabold text-surface-900 mb-6 tracking-tight">
-                        ¿Por qué tu clínica no <span className="text-red-500">crece</span> más rápido?
+                        ¿Por qué tu clínica no <span className="text-brand">crece</span> más rápido?
                     </h2>
                     <p className="text-xl text-surface-500 max-w-2xl mx-auto font-light leading-relaxed">
                         Detectamos los "enemigos silenciosos" que están frenando la rentabilidad de tu consultorio médico.
