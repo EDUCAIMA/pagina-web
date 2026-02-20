@@ -14,7 +14,7 @@ const Contact = () => {
         setMessage({ text: '', type: '' });
 
         try {
-            const API_URL = 'https://backend-production-7bbf.up.railway.app/api/auth/demo-register';
+            const API_URL = 'https://app.vexvel.com/api/auth/demo-register';
 
             const response = await fetch(API_URL, {
                 method: 'POST',
