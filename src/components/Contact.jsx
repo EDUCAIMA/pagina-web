@@ -79,8 +79,8 @@ const Contact = () => {
                             Acceso Inmediato
                         </div>
 
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-white leading-tight">
-                            ¿Listo para <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-500 whitespace-nowrap">modernizar</span> tu clínica?
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-white leading-tight text-center">
+                            ¿Listo para <span className="text-blue-400 whitespace-nowrap drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">modernizar</span> tu clínica?
                         </h2>
                         <p className="text-slate-300 text-lg md:text-xl mb-14 max-w-2xl mx-auto font-light leading-relaxed">
                             Prueba nuestra Demo Gratis y descubre cuánto tiempo y dinero estás dejando sobre la mesa. No requiere tarjeta de crédito.
