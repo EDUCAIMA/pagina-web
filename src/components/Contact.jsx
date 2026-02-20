@@ -14,7 +14,7 @@ const Contact = () => {
         setMessage({ text: '', type: '' });
 
         try {
-            const API_URL = 'https://app.vexvel.com/api/auth/demo-register';
+            const API_URL = 'https://backend-production-7bbf.up.railway.app/api/auth/demo-register';
 
             const response = await fetch(API_URL, {
                 method: 'POST',
@@ -32,7 +32,7 @@ const Contact = () => {
 
             if (response.ok) {
                 setMessage({
-                    text: '¡Cuenta creada! Revisa tu correo electrónico para ver tus credenciales de acceso. Redirigiendo...',
+                    text: '¡Éxito! Tu cuenta está lista. Revisa tu correo electrónico para obtener tu contraseña.',
                     type: 'success'
                 });
 
@@ -41,7 +41,7 @@ const Contact = () => {
                 }, 3000);
             } else {
                 setMessage({
-                    text: resData.detail || 'Ocurrió un error al crear la cuenta.',
+                    text: resData.detail || 'Ocurrió un error al crear la cuenta. Por favor revísalo e intenta de nuevo.',
                     type: 'error'
                 });
             }
@@ -102,7 +102,7 @@ const Contact = () => {
                             {isLoading ? (
                                 <>
                                     <Loader2 className="w-5 h-5 animate-spin" />
-                                    Creando cuenta...
+                                    Creando tu entorno...
                                 </>
                             ) : (
                                 <>
