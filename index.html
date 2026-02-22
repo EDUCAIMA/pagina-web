@@ -11,6 +11,26 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Scroll to hash section after React renders (for external links like email CTAs)
+    (function() {
+      var hash = window.location.hash;
+      if (!hash) return;
+      var attempts = 0;
+      var maxAttempts = 25; // 25 x 200ms = 5 seconds max
+      var interval = setInterval(function() {
+        var el = document.querySelector(hash);
+        if (el) {
+          clearInterval(interval);
+          setTimeout(function() {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        } else if (++attempts >= maxAttempts) {
+          clearInterval(interval);
+        }
+      }, 200);
+    })();
+  </script>
 </body>
 
 </html>
