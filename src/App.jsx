@@ -8,20 +8,29 @@ import ForDentistsPage from './pages/ForDentistsPage';
 import LandingDentistsPage from './pages/LandingDentistsPage';
 
 // Componente que detecta el hash en la URL y hace scroll automático
+// Espera activamente a que el elemento exista en el DOM antes de hacer scroll
 function ScrollToHash() {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      // Pequeño delay para esperar que React renderice el contenido
-      setTimeout(() => {
+      let attempts = 0;
+      const maxAttempts = 30; // Intentar por hasta 3 segundos (30 x 100ms)
+
+      const tryScroll = () => {
         const element = document.querySelector(hash);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else if (attempts < maxAttempts) {
+          attempts++;
+          setTimeout(tryScroll, 100);
         }
-      }, 100);
+      };
+
+      // Iniciar después de un frame para dar tiempo al render inicial
+      requestAnimationFrame(tryScroll);
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return null;
 }
