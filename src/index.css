@@ -1,44 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
   body {
-    @apply bg-white text-surface-900 overflow-x-hidden;
+    background-color: #FAFAFF;
+    color: #211C42;
+    overflow-x: hidden;
+  }
+
+  * {
+    border-color: #E4E4F0;
   }
 }
 
 @layer components {
-  .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  /* ─── Degradado de marca — SOLO en 3 lugares: logo, CTA principal, hero ─── */
+  .gradient-brand {
+    background: linear-gradient(120deg, #2F69E2 0%, #5B2BB0 55%, #431E7D 100%);
   }
-  
-  .glass-dark {
-    @apply bg-surface-900/80 backdrop-blur-lg border border-white/10 shadow-2xl;
-  }
-  
-  .tech-gradient {
-    @apply bg-gradient-to-br from-brand via-brand-light to-brand-accent;
-  }
-  
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand to-brand-accent;
+  .gradient-brand-text {
+    background: linear-gradient(120deg, #2F69E2 0%, #5B2BB0 55%, #431E7D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
+  /* Botón primario — azul sólido */
   .btn-primary {
-    @apply bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-brand/20;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2F69E2;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    white-space: nowrap;
+  }
+  .btn-primary:hover  { background: #2558C8; }
+  .btn-primary:active { transform: scale(0.98); }
+
+  /* Botón fantasma */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #211C42;
+    padding: 11px 23px;
+    border-radius: 8px;
+    border: 0.5px solid #E4E4F0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .btn-ghost:hover {
+    border-color: #2F69E2;
+    color: #2F69E2;
   }
 
-  .btn-secondary {
-    @apply bg-white border-2 border-surface-200 hover:border-brand text-surface-700 hover:text-brand px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-300;
+  /* Etiqueta de sección */
+  .section-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #9B98AE;
+  }
+
+  /* Tarjeta base */
+  .card {
+    background: #FFFFFF;
+    border: 0.5px solid #E4E4F0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(33,28,66,0.06);
   }
 }

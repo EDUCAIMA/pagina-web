@@ -1,31 +1,52 @@
-const Trust = () => {
-    return (
-        <section className="pt-16 pb-8 bg-surface-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-xs font-black text-surface-400 uppercase tracking-[0.3em] mb-12">
-                    Potenciado por tecnología Líder en la Industria
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 hover:opacity-100">
-                    {/* WhatsApp API */}
-                    <div className="flex items-center gap-3">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp Business API" className="h-8 w-auto hover:scale-110 transition-transform" />
-                        <span className="font-bold text-surface-900 text-lg hidden sm:block">WhatsApp API</span>
-                    </div>
+import React from 'react';
 
-                    {/* OpenAI */}
-                    <div className="flex items-center gap-3">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI" className="h-6 w-auto hover:scale-110 transition-transform" />
-                    </div>
+const logos = [
+    { alt: 'WhatsApp',  src: '/logos marcas tecnologia/WhatsApp_icon.png',                label: 'WhatsApp API' },
+    { alt: 'OpenAI',    src: '/logos marcas tecnologia/OpenAI_Logo.svg.png',              label: null },
+    { alt: 'Claude AI', src: '/logos marcas tecnologia/Claude_AI_symbol.svg.png',         label: 'Claude AI' },
+    { alt: 'Gemini',    src: '/logos marcas tecnologia/Google_Gemini_logo_2025.svg.png',  label: null },
+    { alt: 'AWS',       src: '/logos marcas tecnologia/Amazon_Web_Services_Logo.svg.png', label: null },
+    { alt: 'Grok',      src: '/logos marcas tecnologia/grok-3.svg',                       label: null },
+];
 
-                    {/* Google Cloud */}
-                    <div className="flex items-center gap-3">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud" className="h-6 w-auto hover:scale-110 transition-transform" />
-                        <span className="font-bold text-surface-900 text-lg hidden sm:block">Google Cloud</span>
+const track = [...logos, ...logos, ...logos, ...logos];
+
+const Trust = () => (
+    <section className="border-t border-vx-border bg-vx-elevated pt-4 pb-5 overflow-hidden">
+        <p className="section-label text-center mb-4" style={{ fontSize: '0.6rem' }}>Potenciado por tecnología líder</p>
+
+        <div className="relative">
+            {/* Fade izquierdo */}
+            <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-vx-elevated to-transparent z-10 pointer-events-none" />
+            {/* Fade derecho */}
+            <div className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-vx-elevated to-transparent z-10 pointer-events-none" />
+
+            <div className="flex gap-10 items-center trust-track">
+                {track.map((logo, i) => (
+                    <div key={i} className="flex items-center gap-1.5 flex-shrink-0">
+                        <img src={logo.src} alt={logo.alt} className="h-6 w-auto" />
+                        {logo.label && (
+                            <span className="font-semibold text-vx-text text-xs whitespace-nowrap">{logo.label}</span>
+                        )}
                     </div>
-                </div>
+                ))}
             </div>
-        </section>
-    );
-};
+        </div>
+
+        <style>{`
+            .trust-track {
+                width: max-content;
+                animation: trust-marquee 30s linear infinite;
+            }
+            .trust-track:hover {
+                animation-play-state: paused;
+            }
+            @keyframes trust-marquee {
+                from { transform: translateX(0); }
+                to   { transform: translateX(-25%); }
+            }
+        `}</style>
+    </section>
+);
 
 export default Trust;

@@ -1,17 +1,17 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import FloatingAvatar from './FloatingAvatar';
 
-const Layout = ({ children }) => {
-    return (
-        <div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
-            <Navbar />
-            <main className="flex-grow pt-20">
-                {children}
-            </main>
-            <Footer />
-        </div>
-    );
-};
+const Layout = ({ children }) => (
+    <div className="min-h-screen bg-vx-base flex flex-col text-vx-text">
+        <Navbar />
+        <main className="flex-grow pt-16">
+            {children}
+        </main>
+        <Footer />
+        <FloatingAvatar />
+    </div>
+);
 
 export default Layout;

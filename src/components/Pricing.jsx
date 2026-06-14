@@ -1,78 +1,109 @@
 import React from 'react';
-import { Check, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-const Pricing = () => {
-    return (
-        <section id="pricing" className="py-32 bg-surface-900 relative overflow-hidden">
-            {/* Background Accent */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/20 rounded-full blur-[120px] animate-pulse"></div>
+const plans = [
+    {
+        name: 'Básico',
+        price: '$79.000',
+        period: '/mes COP',
+        desc: 'Para negocios que empiezan a automatizar su proceso de ventas.',
+        features: [
+            'Hasta 200 leads/mes',
+            'Agente IA por WhatsApp',
+            'CRM con pipeline básico',
+            'Agenda automática',
+            'Soporte por email',
+        ],
+        cta: 'Empezar',
+        highlight: false,
+    },
+    {
+        name: 'Profesional',
+        price: '$150.000',
+        period: '/mes COP',
+        desc: 'El plan favorito de equipos de ventas que quieren escalar.',
+        features: [
+            'Hasta 1.000 leads/mes',
+            'Agente IA multicanal (WA + IG + email)',
+            'CRM con score de leads y pipeline completo',
+            'Automatización de seguimientos',
+            'Dashboard de métricas avanzado',
+            'Soporte prioritario 24/7',
+        ],
+        cta: 'Empezar gratis',
+        highlight: true,
+    },
+    {
+        name: 'Empresarial',
+        price: '$290.000',
+        period: '/mes COP',
+        desc: 'Para equipos con necesidades de personalización avanzada.',
+        features: [
+            'Leads ilimitados',
+            'Todos los canales + API personalizada',
+            'CRM con múltiples pipelines y usuarios',
+            'Reportes ejecutivos y segmentación',
+            'Integraciones a medida',
+            'Gerente de cuenta dedicado',
+        ],
+        cta: 'Hablar con ventas',
+        highlight: false,
+    },
+];
+
+const Pricing = () => (
+    <section id="pricing" className="border-t border-vx-border py-24 lg:py-32 bg-vx-base">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="mb-16">
+                <p className="section-label mb-4">Precios</p>
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-vx-text tracking-tight max-w-xl">
+                    Simple. Transparente. Sin sorpresas.
+                </h2>
+                <p className="text-vx-muted text-lg mt-4 max-w-lg">
+                    Sin contratos de permanencia. Cancela cuando quieras. Configuración inicial sin costo.
+                </p>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div className="text-center mb-20 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-light font-bold text-xs uppercase tracking-widest mb-6">
-                        Inversión Inteligente
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
-                        Precio <span className="text-gradient">Simple y Transparente</span>
-                    </h2>
-                    <p className="text-xl text-surface-400 max-w-2xl mx-auto font-light leading-relaxed">
-                        Sin comisiones ocultas ni sorpresas. Todo el poder de la IA en una sola tarifa fija.
-                    </p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                {plans.map((plan) => (
+                    <div key={plan.name} className="relative flex flex-col"
+                        style={plan.highlight ? {
+                            background: 'linear-gradient(120deg, #2F69E2, #431E7D)',
+                            padding: '1px',
+                            borderRadius: '13px',
+                        } : {}}>
+                        <div className={`flex flex-col flex-1 rounded-xl p-8 ${plan.highlight ? 'bg-vx-surface' : 'card'}`}>
+                            {plan.highlight && (
+                                <span className="section-label mb-4" style={{ color: '#2F69E2' }}>Más popular</span>
+                            )}
+                            <p className="font-display text-lg font-bold text-vx-text">{plan.name}</p>
+                            <div className="flex items-baseline gap-1 mt-3 mb-1">
+                                <span className="font-mono text-4xl font-bold text-vx-text">{plan.price}</span>
+                                <span className="text-vx-dim text-sm">{plan.period}</span>
+                            </div>
+                            <p className="text-vx-muted text-sm leading-snug mb-8">{plan.desc}</p>
 
-                <div className="max-w-xl mx-auto relative group">
-                    {/* Shadow Glow */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-brand to-brand-accent rounded-[40px] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <ul className="space-y-3 flex-1 mb-8">
+                                {plan.features.map((f) => (
+                                    <li key={f} className="flex items-start gap-2.5 text-sm">
+                                        <span className="text-vx-success font-bold flex-shrink-0 mt-0.5">✓</span>
+                                        <span className="text-vx-muted">{f}</span>
+                                    </li>
+                                ))}
+                            </ul>
 
-                    <div className="relative glass-dark rounded-[40px] p-10 md:p-16 border border-white/10 text-center">
-                        {/* Popular tag */}
-                        <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
-                            <span className="bg-brand text-white px-6 py-2 rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-2xl">
-                                Plan Profesional
-                            </span>
-                        </div>
-
-                        <div className="flex justify-center items-baseline mb-2">
-                            <span className="text-6xl md:text-7xl font-black text-white">$150.000</span>
-                            <span className="text-2xl text-surface-400 ml-3 font-medium">/mes</span>
-                        </div>
-                        <p className="text-brand-light mb-12 font-bold tracking-widest uppercase text-sm">Pesos Colombianos (COP)</p>
-
-                        <div className="grid gap-5 text-left mb-12">
-                            {[
-                                "Agente IA 24/7 en WhatsApp",
-                                "Agenda y calendario ilimitado",
-                                "Recordatorios automáticos",
-                                "Recuperación de ventas perdida",
-                                "Dashboard de métricas avanzado",
-                                "Soporte prioritario 24/7",
-                                "Sin contratos de permanencia"
-                            ].map((feature, i) => (
-                                <div key={i} className="flex items-center gap-4 group/item">
-                                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand/20 flex items-center justify-center border border-brand/30">
-                                        <Check className="w-4 h-4 text-brand-light" />
-                                    </div>
-                                    <span className="text-surface-300 font-medium group-hover/item:text-white transition-colors">{feature}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="btn-primary !w-full !py-5 !text-xl shadow-2xl shadow-brand/40 group">
-                            <Zap className="w-6 h-6 fill-current group-hover:scale-125 transition-transform" />
-                            Activar mi Agente IA
-                        </button>
-
-                        <div className="mt-8 flex items-center justify-center gap-2 text-surface-500 text-sm font-medium">
-                            <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse"></span>
-                            Configuración inicial BONIFICADA (Gratis)
+                            <button
+                                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                className={`flex items-center justify-center gap-2 w-full py-3 rounded-lg font-display font-semibold text-sm transition-all ${plan.highlight ? 'btn-primary' : 'btn-ghost'}`}>
+                                {plan.cta}
+                                <ArrowRight className="w-4 h-4" />
+                            </button>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
-        </section>
-    );
-};
+        </div>
+    </section>
+);
 
 export default Pricing;

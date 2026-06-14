@@ -1,64 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        brand: {
-          DEFAULT: '#0052FF', // Intense Tech Blue
-          dark: '#0039B2',
-          light: '#4C8AFF',
-          accent: '#7C3AED', // Indigo/Purple accent
-        },
-        surface: {
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          200: '#E2E8F0',
-          300: '#CBD5E1',
-          400: '#94A3B8',
-          500: '#64748B',
-          600: '#475569',
-          700: '#334155',
-          800: '#1E293B',
-          900: '#0F172A',
-        },
-        success: {
-          DEFAULT: '#10b981', // Emerald 500
-          light: '#34d399', // Emerald 400
-          dark: '#059669', // Emerald 600
-        },
+        'vx-base':     '#FAFAFF',   // fondo principal
+        'vx-surface':  '#FFFFFF',   // tarjetas y paneles
+        'vx-elevated': '#F2F2FA',   // secciones alternas / cabeceras de card
+        'vx-border':   '#E4E4F0',   // todos los bordes (0.5px)
+        'vx-brand':    '#2F69E2',   // azul primario
+        'vx-accent':   '#431E7D',   // violeta acento
+        'vx-text':     '#211C42',   // texto principal (nunca negro puro)
+        'vx-muted':    '#6B6585',   // texto secundario
+        'vx-dim':      '#9B98AE',   // texto atenuado / captions
+        'vx-success':  '#16A34A',   // SOLO estados "completado"
+        'vx-warning':  '#D97706',
+        'vx-danger':   '#DC2626',
       },
       fontFamily: {
-        sans: ['"Outfit"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+        mono:    ['"JetBrains Mono"', 'monospace'],
       },
-      animation: {
-        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-        'fade-in': 'fadeIn 0.5s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'shimmer': 'shimmer 2s linear infinite',
-      },
-      keyframes: {
-        fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        shimmer: {
-          '100%': { transform: 'translateX(100%)' },
-        },
-      },
-      backdropBlur: {
-        xs: '2px',
+      boxShadow: {
+        'card':       '0 1px 3px rgba(33,28,66,0.06)',
+        'card-hover': '0 4px 12px rgba(33,28,66,0.10)',
       },
     },
   },
